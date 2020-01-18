@@ -322,16 +322,43 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
+
+// bonnie's version 
 function counterMakerWithLimit(limit) {
   let count = 0;
-  return function counter() {
+
+   return function counter() {for (let i = 0; i < limit; i++){
     if (count < limit){
-      return count++
-    } else {
-      count = 0
+      return count++;
+    } else {  
+      return count = 0
+    }}
+  }
+}
+
+
+
+// alex's version
+function counterMakerWithLimit(limit) {
+  let count = 0;
+
+   return function counter() {
+    if (count < limit){
+      return count++;
+    } else {  
+      return count = 0
     }
   }
 }
+
+
+
+
+
+
+
+
+
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
