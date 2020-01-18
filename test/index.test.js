@@ -81,17 +81,17 @@ describe("processContains()", () => {
   });
 });
 
-// describe("processDuplicateFree() [STRETCH TASK]", () => {
-//   it("works as specified", () => {
-//     const arr = [1, 2, 3, 4, 4, 5, 6, 7, 7, 7]
-//     const arr2 = [1, 2, 3]
-//     const expected = [1, 2, 3, 4, 5, 6, 7]
-//     const cb = (list) => list
-//     expect(processDuplicateFree(arr2, cb)).to.eql(arr2);
-//     expect(processDuplicateFree(arr, cb)).to.eql(expected);
-//     expect(processDuplicateFree([], cb)).to.eql([]);
-//   });
-// });
+describe("processDuplicateFree() [STRETCH TASK]", () => {
+  it("works as specified", () => {
+    const arr = [1, 2, 3, 4, 4, 5, 6, 7, 7, 7]
+    const arr2 = [1, 2, 3]
+    const expected = [1, 2, 3, 4, 5, 6, 7]
+    const cb = (list) => list
+    expect(processDuplicateFree(arr2, cb)).to.eql(arr2);
+    expect(processDuplicateFree(arr, cb)).to.eql(expected);
+    expect(processDuplicateFree([], cb)).to.eql([]);
+  });
+});
 
 describe("getFullNames()", () => {
   it("returns an array of strings", () => {
