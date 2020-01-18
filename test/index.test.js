@@ -81,17 +81,17 @@ describe("processContains()", () => {
   });
 });
 
-describe("processDuplicateFree() [STRETCH TASK]", () => {
-  it("works as specified", () => {
-    const arr = [1, 2, 3, 4, 4, 5, 6, 7, 7, 7]
-    const arr2 = [1, 2, 3]
-    const expected = [1, 2, 3, 4, 5, 6, 7]
-    const cb = (list) => list
-    expect(processDuplicateFree(arr2, cb)).to.eql(arr2);
-    expect(processDuplicateFree(arr, cb)).to.eql(expected);
-    expect(processDuplicateFree([], cb)).to.eql([]);
-  });
-});
+// describe("processDuplicateFree() [STRETCH TASK]", () => {
+//   it("works as specified", () => {
+//     const arr = [1, 2, 3, 4, 4, 5, 6, 7, 7, 7]
+//     const arr2 = [1, 2, 3]
+//     const expected = [1, 2, 3, 4, 5, 6, 7]
+//     const cb = (list) => list
+//     expect(processDuplicateFree(arr2, cb)).to.eql(arr2);
+//     expect(processDuplicateFree(arr, cb)).to.eql(expected);
+//     expect(processDuplicateFree([], cb)).to.eql([]);
+//   });
+// });
 
 describe("getFullNames()", () => {
   it("returns an array of strings", () => {
@@ -129,56 +129,56 @@ describe("getRunnersByTShirtSize()", () => {
   });
 });
 
-// describe("tallyUpDonations()", () => {
-//   it("returns 0 for an empty runners array", () => {
-//     expect(tallyUpDonations([])).to.equal(0);
-//   });
-//   it("returns the expected amount for a small dataset", () => {
-//     expect(tallyUpDonations([
-//       { donation: 1 },
-//       { donation: 2 },
-//       { donation: 3 },
-//     ])).to.equal(6);
-//   });
-//   it("returns the expected amount for the runners array", () => {
-//     expect(tallyUpDonations(runners)).to.equal(7043);
-//   });
-// });
+describe("tallyUpDonations()", () => {
+  it("returns 0 for an empty runners array", () => {
+    expect(tallyUpDonations([])).to.equal(0);
+  });
+  it("returns the expected amount for a small dataset", () => {
+    expect(tallyUpDonations([
+      { donation: 1 },
+      { donation: 2 },
+      { donation: 3 },
+    ])).to.equal(6);
+  });
+  it("returns the expected amount for the runners array", () => {
+    expect(tallyUpDonations(runners)).to.equal(7043);
+  });
+});
 
-// describe("counterMaker()", () => {
-//   const counter = counterMaker()
-//   it("returns a function", () => {
-//     expect(isFunction(counter)).to.equal(true);
-//   });
-//   it("the counter produced with counterMaker returns 0 on first invocation", () => {
-//     expect(counter()).to.equal(0);
-//   });
-//   it("the counter produced with counterMaker returns 1 on second invocation", () => {
-//     expect(counter()).to.equal(1);
-//   });
-//   it("the counter produced with counterMaker returns 2 on third invocation", () => {
-//     expect(counter()).to.equal(2);
-//   });
-// });
+describe("counterMaker()", () => {
+  const counter = counterMaker()
+  it("returns a function", () => {
+    expect(isFunction(counter)).to.equal(true);
+  });
+  it("the counter produced with counterMaker returns 0 on first invocation", () => {
+    expect(counter()).to.equal(0);
+  });
+  it("the counter produced with counterMaker returns 1 on second invocation", () => {
+    expect(counter()).to.equal(1);
+  });
+  it("the counter produced with counterMaker returns 2 on third invocation", () => {
+    expect(counter()).to.equal(2);
+  });
+});
 
-// describe("counterMakerWithLimit()", () => {
-//   const counter = counterMakerWithLimit(3)
-//   it("returns a function", () => {
-//     expect(isFunction(counter)).to.equal(true);
-//   });
-//   it("the counter produced with counterMakerWithLimit returns 0 on first invocation", () => {
-//     expect(counter()).to.equal(0);
-//   });
-//   it("the counter produced with counterMakerWithLimit increments correctly", () => {
-//     expect(counter()).to.equal(1);
-//     expect(counter()).to.equal(2);
-//     expect(counter()).to.equal(3);
-//   });
-//   it("the counter produced with counterMakerWithLimit resets itself after reaching maxValue", () => {
-//     expect(counter()).to.equal(0);
-//     expect(counter()).to.equal(1);
-//   });
-// });
+describe("counterMakerWithLimit()", () => {
+  const counter = counterMakerWithLimit(3)
+  it("returns a function", () => {
+    expect(isFunction(counter)).to.equal(true);
+  });
+  it("the counter produced with counterMakerWithLimit returns 0 on first invocation", () => {
+    expect(counter()).to.equal(0);
+  });
+  it("the counter produced with counterMakerWithLimit increments correctly", () => {
+    expect(counter()).to.equal(1);
+    expect(counter()).to.equal(2);
+    expect(counter()).to.equal(3);
+  });
+  it("the counter produced with counterMakerWithLimit resets itself after reaching maxValue", () => {
+    expect(counter()).to.equal(0);
+    expect(counter()).to.equal(1);
+  });
+});
 
 ////// STUDENTS: DO NOT MODIFY THIS FILE //////
 ////// STUDENTS: DO NOT MODIFY THIS FILE //////
