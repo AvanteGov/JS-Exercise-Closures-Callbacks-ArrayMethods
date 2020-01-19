@@ -328,17 +328,17 @@ function counterMaker() {
 */
 
 // bonnie's version 
-function counterMakerWithLimit(limit) {
-  let count = 0;
+// function counterMakerWithLimit(limit) {
+//   let count = 0;
 
-   return function counter() {for (let i = 0; i < limit; i++){
-    if (count < limit){
-      return count++;
-    } else {  
-      return count = 0
-    }}
-  }
-}
+//    return function counter() {for (let i = 0; i < limit; i++){
+//     if (count < limit){
+//       return count++;
+//     } else {  
+//       return count = 0
+//     }}
+//   }
+// }
 
 
 
@@ -347,13 +347,19 @@ function counterMakerWithLimit(limit) {
   let count = 0;
 
    return function counter() {
-    if (count < limit){
+    if (count < limit + 1){
+      console.log(count);
       return count++;
-    } else {  
+    } else if (count = limit) {  
       return count = 0
+    } else {
+      count = count 
     }
   }
 }
+
+
+
 
 
 
