@@ -341,33 +341,20 @@ function counterMaker() {
 // }
 
 
-
+// look up the mod operator 
 // alex's version
 function counterMakerWithLimit(limit) {
   let count = 0;
 
    return function counter() {
-    if (count < limit + 1){
-      console.log(count);
+    if (count < limit){
       return count++;
-    } else if (count = limit) {  
-      return count = 0
     } else {
-      count = count 
+      count = 0
+      return limit
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /////////////// END OF CHALLENGE ///////////////
